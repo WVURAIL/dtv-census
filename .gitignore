@@ -1,0 +1,7 @@
+raw/*
+!raw/README.md
+out/
+.venv/
+.ruff_cache/
+__pycache__/
+*.pyc
