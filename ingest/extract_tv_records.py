@@ -24,7 +24,8 @@ from __future__ import annotations
 
 import argparse
 import csv
-import sys
+import math
+from pathlib import Path
 
 
 def main(argv=None) -> int:
@@ -43,32 +44,47 @@ def main(argv=None) -> int:
                     help="window upper edge in MHz (default 608)")
     args = ap.parse_args(argv)
 
+    if not (math.isfinite(args.lo) and math.isfinite(args.hi) and args.lo < args.hi):
+        ap.error("frequency window must have finite bounds with --lo < --hi")
+    if args.field_index is not None and args.field_index < 0:
+        ap.error("--field-index must be non-negative")
+    src, dst = Path(args.src), Path(args.dst)
+    if src.resolve() == dst.resolve() or (dst.exists() and src.samefile(dst)):
+        ap.error("input and output must be different files")
+
     n_in = n_out = n_blank = 0
-    with open(args.src, newline="", encoding="utf-8", errors="replace") as fin, \
-         open(args.dst, "w", newline="", encoding="utf-8") as fout:
+    with open(args.src, newline="", encoding="utf-8", errors="replace") as fin:
         reader = csv.reader(fin)
-        writer = csv.writer(fout)
+        header = None
         if args.field_index is None:
-            header = next(reader)
+            header = next(reader, None)
+            if header is None:
+                ap.error("input CSV is empty; expected a header row")
             try:
                 idx = header.index(args.field)
             except ValueError:
                 names = ", ".join(header[:12])
-                sys.exit(f"no column {args.field!r} in header ({names}, ...); "
+                ap.error(f"no column {args.field!r} in header ({names}, ...); "
                          f"use --field or --field-index")
-            writer.writerow(header)
         else:
             idx = args.field_index
-        for row in reader:
-            n_in += 1
-            try:
-                mhz = float(row[idx])
-            except (IndexError, ValueError):
-                n_blank += 1
-                continue
-            if args.lo <= mhz < args.hi:
-                writer.writerow(row)
-                n_out += 1
+        # Validate the source header before opening an existing output for writing.
+        with open(args.dst, "w", newline="", encoding="utf-8") as fout:
+            writer = csv.writer(fout)
+            if header is not None:
+                writer.writerow(header)
+            for row in reader:
+                n_in += 1
+                try:
+                    mhz = float(row[idx])
+                    if not math.isfinite(mhz):
+                        raise ValueError("non-finite frequency")
+                except (IndexError, ValueError):
+                    n_blank += 1
+                    continue
+                if args.lo <= mhz < args.hi:
+                    writer.writerow(row)
+                    n_out += 1
 
     print(f"{args.src}: {n_in:,} rows in, {n_out:,} in "
           f"[{args.lo:g}, {args.hi:g}) MHz -> {args.dst} "

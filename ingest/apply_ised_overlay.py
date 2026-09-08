@@ -41,7 +41,7 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "census"))
 sys.path.insert(0, str(REPO / "ingest"))
 
-from census_from_xlsx import (CENSUS_SCHEMA_VERSION, reduce,       # noqa: E402
+from census_from_xlsx import (CENSUS_SCHEMA_VERSION, format_bearing, reduce,  # noqa: E402
                               write_csv)
 from verify_against_ised import (DRAO, POSITION_TOL_KM, RADIUS_MI,   # noqa: E402
                                  WORKBOOK, canon_callsign,
@@ -82,7 +82,7 @@ def apply_site(row, st):
     km = haversine_km(*DRAO, st["lat"], st["lon"])
     old = float(row["distance_km"]) if row.get("distance_km") else km
     row["distance_km"] = f"{km:.1f}"
-    row["bearing_deg"] = f"{bearing_deg(*DRAO, st['lat'], st['lon']):.1f}"
+    row["bearing_deg"] = format_bearing(bearing_deg(*DRAO, st["lat"], st["lon"]))
     row["erp_kw"] = f"{10 ** (st['erp_dbw'] / 10) / 1e3:.3f}" \
         if not math.isnan(st["erp_dbw"]) else ""
     return old - km
@@ -115,7 +115,7 @@ def main(argv: list[str] | None = None) -> int:
         bases = [canon_callsign(p)[0] for p in row["callsign"].split("+")]
         st = next((by_key[(b, row["rf_channel"])] for b in bases
                    if (b, row["rf_channel"]) in by_key), None)
-        if st is None and row["latitude"] != "":
+        if st is None and row["latitude"] != "" and row["longitude"] != "":
             st = next((s for s in stations
                        if s["channel"] == row["rf_channel"]
                        and haversine_km(row["latitude"], row["longitude"],

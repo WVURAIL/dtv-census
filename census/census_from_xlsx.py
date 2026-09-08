@@ -45,6 +45,11 @@ def channels(cell) -> list[int]:
             if c in UHF_RANGE]
 
 
+def format_bearing(angle) -> str:
+    """Round while preserving the CSV's half-open [0, 360) bearing range."""
+    return f"{round(float(angle), 1) % 360.0:.1f}"
+
+
 def reduce(df: pd.DataFrame):
     """The deterministic reduction: on-air rows -> merged emitter-channel
     rows. Returns (rows, stats); rows carry the CSV_FIELDS plus workbook
@@ -67,7 +72,7 @@ def reduce(df: pd.DataFrame):
                 "service_class": str(r["Class"]).strip(),
                 "detectability_db": ("" if pd.isna(fs) else f"{float(fs):.2f}"),
                 "distance_km": f"{float(r['Distance to DRAO (mi)']) * MI_TO_KM:.1f}",
-                "bearing_deg": f"{float(r['Bearing from DRAO (deg, True)']):.1f}",
+                "bearing_deg": format_bearing(r["Bearing from DRAO (deg, True)"]),
                 "frequency_tolerance": str(r["Frequency Tolerance"]).strip(),
                 "chime_ch_index": ("" if pd.isna(r["CHIME Ch Index"])
                                    else str(int(r["CHIME Ch Index"]))),

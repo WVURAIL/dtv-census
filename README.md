@@ -60,6 +60,25 @@ python3 ingest/apply_ised_overlay.py
 | `census/VERIFICATION.md` | Dated cross-check of the workbook's Canadian rows against the ISED extract (`ingest/verify_against_ised.py` regenerates it). |
 | `raw/` | Empty, gitignored. Working directory for local copies of the large extracts; see `raw/README.md` for where to get them. |
 
+## USA record loading
+
+`ingest/load_fcc_lms.py` loads US UHF digital-TV licence sites from native
+FCC LMS public database tables or ZIP downloads. It follows current granted
+licences through transmitter sites and antennas, preserves physical channels
+and ERP in kW, and exports candidates with source IDs and snapshot dates.
+See [`sources/fcc/README.md`](sources/fcc/README.md) for downloads, usage,
+selection rules and limits. Its output is separate from the historical
+workbook-derived census until USA matching and sharing are adjudicated.
+
+## Tests
+
+Install `requirements-dev.txt`, then run `make verify` (or
+`python -m ruff check census ingest tests` followed by
+`python -m pytest -q --cov --cov-report=term-missing`). The suite covers each
+processing stage, CLI behavior, malformed inputs and complete regeneration,
+with a 95% combined line/branch coverage gate. See
+[`tests/README.md`](tests/README.md) for setup and the component coverage map.
+
 ## What stays on SharePoint
 
 GitHub rejects files over 100 MB and this repository has no reason to carry

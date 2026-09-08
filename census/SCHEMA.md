@@ -33,3 +33,13 @@ detection:
   do not confirm that the transmitter was emitting. These rows belong to the
   conservative maximum envelope and must not be described as observed
   carriers.
+
+This snapshot does not establish historical transmitter sign-on or sign-off
+dates, nor a verified transmitter-off population for receiver calibration.
+Such claims require dated independent station evidence. A lower level in a
+receiver's own archive is an inferred change, not independent confirmation.
+
+`detectability_db` retains a modeled RabbitEars field-strength value, not a
+CHIME detection probability or received shelf SNR. The archived study used
+the tool's maximum receive height; consumers must retain that geometry
+qualification when interpreting the score.

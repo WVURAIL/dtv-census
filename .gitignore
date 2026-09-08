@@ -5,3 +5,7 @@ out/
 .ruff_cache/
 __pycache__/
 *.pyc
+.pytest_cache/
+.coverage*
+htmlcov/
+coverage.xml

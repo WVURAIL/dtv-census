@@ -62,11 +62,15 @@ def haversine_km(lat1, lon1, lat2, lon2):
     a = (math.sin(rad(lat2 - lat1) / 2) ** 2
          + math.cos(rad(lat1)) * math.cos(rad(lat2))
          * math.sin(rad(lon2 - lon1) / 2) ** 2)
-    return 6371.0088 * 2 * math.asin(math.sqrt(a))
+    # Roundoff can put an antipodal pair just outside asin's domain.
+    return 6371.0088 * 2 * math.asin(math.sqrt(min(max(a, 0.0), 1.0)))
 
 
 def dms_to_deg(s):
     d, m, sec = (float(x) for x in str(s).split(":"))
+    if not all(math.isfinite(x) for x in (d, m, sec)) \
+            or d < 0 or not 0 <= m < 60 or not 0 <= sec < 60:
+        raise ValueError(f"invalid unsigned D:M:S coordinate: {s!r}")
     return d + m / 60 + sec / 3600
 
 
@@ -109,10 +113,14 @@ def load_ised():
                 continue
             try:
                 lat, lon = dms_to_deg(r[C_LAT]), -dms_to_deg(r[C_LON])
+                if not 0 <= lat <= 90 or not -180 <= lon <= 0:
+                    continue
             except (ValueError, AttributeError):
                 continue
             try:
                 erp_dbw = float(r[C_ERP_DBW])
+                if not math.isfinite(erp_dbw):
+                    erp_dbw = float("nan")
             except ValueError:
                 erp_dbw = float("nan")
             raw.append(dict(
@@ -133,10 +141,15 @@ def load_ised():
             merged[key] = dict(rec, n_records=1)
         else:
             keep["n_records"] += 1
-            if not rec["aux"] and (keep["aux"] or
-                                   rec["erp_dbw"] > keep["erp_dbw"]):
-                for k in ("callsign", "aux", "erp_dbw", "lat", "lon"):
-                    keep[k] = rec[k]
+            def priority(record):
+                erp = record["erp_dbw"]
+                return (not record["aux"],
+                        erp if math.isfinite(erp) else -math.inf)
+
+            if priority(rec) > priority(keep):
+                # Geometry, distance and service metadata must come from the
+                # same selected authorization, including when an aux came first.
+                keep.update(rec)
     stations = [e for e in merged.values()
                 if e["record_type"] in ("TV", "LPTV", "LPA")]
     other = [e for e in merged.values()
