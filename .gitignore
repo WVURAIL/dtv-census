@@ -9,3 +9,7 @@ __pycache__/
 .coverage*
 htmlcov/
 coverage.xml
+
+# Reproducible history figures and visual QA renders
+/output/
+/tmp/

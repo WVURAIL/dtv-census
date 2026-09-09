@@ -1,0 +1,228 @@
+{
+  "cohort": [
+    {
+      "site_number": 1,
+      "market": "Wilson Creek",
+      "callsign": "CHAN-DT-6"
+    },
+    {
+      "site_number": 2,
+      "market": "Bowen Island",
+      "callsign": "CHAN-DT-2"
+    },
+    {
+      "site_number": 3,
+      "market": "Oliver CHAN",
+      "callsign": "CKKM-TV"
+    },
+    {
+      "site_number": 4,
+      "market": "Skaha Lake (Ni' kwalla) /Pentiction",
+      "callsign": "CHBC-TV-7"
+    },
+    {
+      "site_number": 5,
+      "market": "Taghum",
+      "callsign": "CKTN-DT-2"
+    },
+    {
+      "site_number": 6,
+      "market": "Brackendale",
+      "callsign": "CHAN-DT-5"
+    },
+    {
+      "site_number": 7,
+      "market": "100 Mile House",
+      "callsign": "CITM-DT"
+    },
+    {
+      "site_number": 8,
+      "market": "Squamish",
+      "callsign": "CHAN-DT-3"
+    },
+    {
+      "site_number": 9,
+      "market": "Santa Rosa",
+      "callsign": "CISR-DT"
+    },
+    {
+      "site_number": 10,
+      "market": "Salmon Arm",
+      "callsign": "CHBC-TV-4"
+    },
+    {
+      "site_number": 11,
+      "market": "Quesnel",
+      "callsign": "CITM-DT-2"
+    },
+    {
+      "site_number": 12,
+      "market": "Williams Lake",
+      "callsign": "CITM-DT-1"
+    },
+    {
+      "site_number": 13,
+      "market": "Canoe",
+      "callsign": "CHBC-TV-8"
+    },
+    {
+      "site_number": 14,
+      "market": "Oliver CHBC",
+      "callsign": "CHBC-TV-3"
+    },
+    {
+      "site_number": 15,
+      "market": "Castlegar",
+      "callsign": "CKTN-TV-1"
+    },
+    {
+      "site_number": 16,
+      "market": "Nelson",
+      "callsign": "CKTN-TV-3"
+    },
+    {
+      "site_number": 17,
+      "market": "Whistler",
+      "callsign": "CHAN-DT-7"
+    },
+    {
+      "site_number": 18,
+      "market": "Creston",
+      "callsign": "CKTN-TV-4"
+    },
+    {
+      "site_number": 19,
+      "market": "Grand Forks",
+      "callsign": "CISR-DT-1"
+    },
+    {
+      "site_number": 20,
+      "market": "Revelstoke",
+      "callsign": "CHRP-DT-2"
+    },
+    {
+      "site_number": 21,
+      "market": "Revelstoke",
+      "callsign": "CHKL-DT-3"
+    },
+    {
+      "site_number": 22,
+      "market": "Pritchard",
+      "callsign": "CHKM-DT-1"
+    },
+    {
+      "site_number": 23,
+      "market": "Enderby",
+      "callsign": "CHBC-TV-5"
+    },
+    {
+      "site_number": 24,
+      "market": "Apex Mountain",
+      "callsign": "CHBC-TV-9"
+    },
+    {
+      "site_number": 25,
+      "market": "Brooks",
+      "callsign": "CISA-TV-2"
+    },
+    {
+      "site_number": 26,
+      "market": "Burmis",
+      "callsign": "CISA-TV-1"
+    },
+    {
+      "site_number": 27,
+      "market": "Drumheller",
+      "callsign": "CICT-TV-1"
+    },
+    {
+      "site_number": 28,
+      "market": "Banff",
+      "callsign": "CICT-TV-2"
+    },
+    {
+      "site_number": 29,
+      "market": "Coleman",
+      "callsign": "CISA-TV-3"
+    },
+    {
+      "site_number": 30,
+      "market": "Pincher Creek",
+      "callsign": "CISA-TV-5"
+    },
+    {
+      "site_number": 31,
+      "market": "Waterton Park",
+      "callsign": "CISA-TV-4"
+    },
+    {
+      "site_number": 32,
+      "market": "Fort Qu'appelle",
+      "callsign": "CFRE-TV-2"
+    },
+    {
+      "site_number": 33,
+      "market": "Smith Falls",
+      "callsign": "CKWS-TV-3"
+    },
+    {
+      "site_number": 34,
+      "market": "Bancroft",
+      "callsign": "CHEX-TV-1"
+    },
+    {
+      "site_number": 35,
+      "market": "Miramichi",
+      "callsign": "CIHF-DT-13"
+    },
+    {
+      "site_number": 36,
+      "market": "Woodstock",
+      "callsign": "CIHF-DT-11"
+    },
+    {
+      "site_number": 37,
+      "market": "St. Stephen",
+      "callsign": "CIHF-DT-12"
+    },
+    {
+      "site_number": 38,
+      "market": "Bridgewater",
+      "callsign": "CIHF-DT-6"
+    },
+    {
+      "site_number": 39,
+      "market": "Truro",
+      "callsign": "CIHF-DT-4"
+    },
+    {
+      "site_number": 40,
+      "market": "New Glasgow",
+      "callsign": "CIHF-DT-8"
+    },
+    {
+      "site_number": 41,
+      "market": "Antigonish",
+      "callsign": "CIHF-DT-15"
+    },
+    {
+      "site_number": 42,
+      "market": "Yarmouth",
+      "callsign": "CIHF-DT-10"
+    },
+    {
+      "site_number": 43,
+      "market": "Shelburne",
+      "callsign": "CIHF-DT-9"
+    },
+    {
+      "site_number": 44,
+      "market": "Mulgrave",
+      "callsign": "CIHF-DT-16"
+    }
+  ],
+  "reported_month": "2018-10",
+  "timezone": null,
+  "original_source_sha256": "62572399a7e55a75e0837298ed7916a7376c9ef12c22aa0df6776584650236da",
+  "cohort_link_basis": "The44-station Appendix A of deletion application 2018-0936-0 matches the 44-station2018 decommissioning described retrospectively in the 2019 multiplex supplementary briefs and 2020 response. This is an explicit evidence synthesis, not 44 separate station logs."
+}

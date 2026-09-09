@@ -10,6 +10,13 @@ the dissertation has to carry upstream broadcast-database bulk: pilot-proxy
 consumes the derived `census/census.csv`; everything upstream of that file
 lives here.
 
+## Transmitter history
+
+[The history project](history/README.md) records dated transmitter evidence and
+reproduces a large channel-versus-time overview with a 44-transmitter shutdown
+appendix. It separates reported events from administrative dates and preserves
+unknown operating intervals.
+
 ## The provenance chain
 
 ```

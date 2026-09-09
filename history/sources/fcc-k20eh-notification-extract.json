@@ -1,0 +1,81 @@
+{
+  "schema": "rfisher-regulatory-notification-lead-v1",
+  "facility": {
+    "active_ind": "Y",
+    "atsc3_ind": "",
+    "authorizing_act": "",
+    "callsign": "K20EH-D",
+    "callsign_effective_date": "2013-03-27 00:00:00.0",
+    "channel": "20",
+    "channel_sharing_ind": "N",
+    "community_served_city": "HOOD RIVER",
+    "community_served_state": "OR",
+    "create_ts": "2015-02-03 14:09:26.477977",
+    "digital_operation": "",
+    "expiration_date": "2031-02-01 00:00:00.0",
+    "facility_id": "35472",
+    "facility_status": "LICSL",
+    "facility_type": "",
+    "facility_uuid": "86160b7d-d489-7392-e40c-b2a6f1dfd752",
+    "facility_zone_code": "",
+    "frequency": "506.0",
+    "last_update_ts": "2024-05-16 12:58:42.97",
+    "latest_filing_version_id": "3f6df8ab14604c41b4bfcf6212b6c0ea",
+    "license_filing_id": "880edcaae6364a0c8f7fcf6212b6c0ea",
+    "network_affiliation": "",
+    "nielsen_dma_rank": "",
+    "primary_station": "KPTV",
+    "satellite_tv_ind": "N",
+    "service_code": "LPT",
+    "station_type": "M",
+    "status_date": "2024-05-16 12:58:42.97",
+    "tsid_dtv": "",
+    "tsid_ntsc": "",
+    "tv_virtual_channel": ""
+  },
+  "notification_versions": [
+    {
+      "active_ind": "Y",
+      "auth_type_code": "L",
+      "create_ts": "2024-05-16 12:45:24.14",
+      "current_status_code": "REC",
+      "discriminator_code": "TV",
+      "filing_version_id": "25076f918f81e30b018f824b4d72034c",
+      "last_update_ts": "2024-05-16 12:58:42.099",
+      "license_filing_id": "880edcaae6364a0c8f7fcf6212b6c0ea",
+      "original_auth_type_code": "L",
+      "original_purpose_code": "",
+      "prev_filing_version_id": "",
+      "processing_status": "Y",
+      "purpose_code": "NTF",
+      "ref_filing_version_id": "3f6df8ab14604c41b4bfcf6212b6c0ea",
+      "service_code": "LPD",
+      "status_date": "2024-05-16 00:00:00.0",
+      "sub_purpose_code": "SUS"
+    }
+  ],
+  "source_snapshot_date": "2026-09-08",
+  "source_sha256": {
+    "/home/djg/rail/dtv-census/census/census.csv": "05caae7a509e8a18eb98cb63e8637a985ace4eb503ecf06cc17a6da298dca12f",
+    "/home/djg/rail/dtv-census/raw/fcc-lms-2026-09-08/facility.zip": "733976d576c01c3d9dbd1f212e2aaca49b98fd6568d0cc02795aff841ef5d43a",
+    "/home/djg/rail/dtv-census/raw/fcc-lms-2026-09-08/license_filing_version.zip": "caa8c9b38addcfee7fde18826ca318caafc78881ed442c5e420b3afa22c9c7ed",
+    "/home/djg/rail/dtv-census/raw/fcc-uhf-2026-09-08.csv": "3c79d56cfb57bedd405c054a1b97759ce6e48e8d6a4783eef95e1eab8a7b3458"
+  },
+  "derived_source_sha256": "db7e61c37736873cf02333c4c687d466bb9b8148b287c0879c04318d9240f7a8",
+  "effective_outage_start": null,
+  "effective_outage_end": null,
+  "verified_rf_intervals": [],
+  "public_retrieval_status": "FCC public application/search/schema/daily-table routes returned HTTP 403 during this follow-up; no browser was available.",
+  "interpretation": "The exact suspension-notification filing has now been identified. Its receipt/status date is 2024-05-16, but the actual cessation date inside the notification has not been retrieved.",
+  "next_target": {
+    "filing_version_id": "25076f918f81e30b018f824b4d72034c",
+    "facility_id": "35472",
+    "application_url": "https://enterpriseefiling.fcc.gov/dataentry/public/tv/publicAppSearch.html?filingVersionId=25076f918f81e30b018f824b4d72034c"
+  },
+  "broadcaster_page": {
+    "url": "https://www.kptv.com/page/kptv-translators/",
+    "path": "/home/djg/rail/results/calibration_progress_2026-09-09/regulatory/sources/kptv-translators.html",
+    "sha256": "2e572545fdd8d11c5bddbc77ab5f67dbb79fa2c526c9cb3c65975f0d83413666",
+    "claim": "The broadcaster page says K20EH-D carries KPTV programming on channel 20. It has no usable event date and cannot reconcile or override the suspension notification."
+  }
+}

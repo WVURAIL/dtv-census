@@ -25,5 +25,5 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -r requirements-dev.txt
-      - run: python -m ruff check census ingest tests
+      - run: python -m ruff check census ingest history tests
       - run: python -m pytest -q --cov --cov-report=term-missing

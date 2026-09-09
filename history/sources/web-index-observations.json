@@ -1,0 +1,107 @@
+[
+  {
+    "id": "shaw-2014-index",
+    "source_url": "https://crtc.gc.ca/eng/bcasting/ann_rep/shaw_t2.pdf",
+    "source_document_date": "2014-09-30",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Appendix 1, six CHBC/CHKL Kelowna/Penticton/Vernon rows",
+    "observation": "The operator report lists October 2012 digital on-air dates for the six Okanagan transmitters. Exact days and time zones are absent.",
+    "limitations": "Direct PDF retrieval returned HTTP 403; this research observation is not the original PDF.",
+    "retrieved_snippets": [
+      "CHKL-DT  | October 2012",
+      "CHKL-DT-1  | October 2012",
+      "CHKL-DT-2  | October 2012",
+      "CHBC-DT  | October 2012",
+      "CHBC-DT-1  | October 2012",
+      "CHBC-DT-2  | October 2012"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09"
+  },
+  {
+    "id": "crtc-2017-150-index",
+    "source_url": "https://crtc.gc.ca/eng/archive/2017/2017-150.htm",
+    "source_document_date": "2017-05-15",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Appendix 1, British Columbia CHAN transmitter list",
+    "observation": "Both CHAN-DT-2 Bowen Island and CHAN-TV-2 Bowen Island are separately listed before the shutdown cohort.",
+    "limitations": "Do not collapse DT and TV identifiers or infer later resumption from the analog-name listing.",
+    "retrieved_snippets": [
+      "CHAN-DT-2 Bowen Island\nCHAN-TV-2 Bowen Island"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09"
+  },
+  {
+    "id": "crtc-2020-71-index",
+    "source_url": "https://crtc.gc.ca/eng/archive/2020/2020-71.htm",
+    "source_document_date": "2020-02-24",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Appendix, British Columbia",
+    "observation": "CHAN-TV-2 remains in the later service list. CHAN-DT-2 is absent from that list.",
+    "limitations": "The administrative service list is not a physical transmitter-status observation.",
+    "retrieved_snippets": [
+      "CHAN-TV-2 Bowen Island"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09"
+  },
+  {
+    "id": "crtc-2026-103-index",
+    "source_url": "https://crtc.gc.ca/eng/archive/2026/2026-103.htm",
+    "source_document_date": "2026-05-26",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Notice heading; no verified service-list appendix",
+    "observation": "This is an ownership consultation notice. Its source URL does not substantiate the previously suggested retained-transmitter list.",
+    "limitations": "Rejected as evidence of a 2026 transmitter listing; no timeline event or RF interval is derived from this notice.",
+    "retrieved_snippets": [
+      "Broadcasting Notice of Consultation CRTC 2026-103"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09",
+    "accepted_for_identity_history": false
+  },
+  {
+    "id": "crtc-2019-209-index",
+    "source_url": "https://crtc.gc.ca/eng/archive/2019/2019-209.htm",
+    "source_document_date": "2019-06-13",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Appendix 1, 44 transmitter deletion list",
+    "observation": "The deletion order includes CHAN-DT-2, CITM-DT, CHAN-DT-6 and CKTN-DT-2. Its date is the administrative decision date.",
+    "limitations": "No effective RF shutdown day or continuous silence is supplied by the decision date.",
+    "retrieved_snippets": [
+      "Ottawa, 13 June 2019",
+      "the Commission deletes 44 rebroadcasting transmitters from Corus’s broadcasting licences"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09"
+  },
+  {
+    "id": "crtc-2020-391-index",
+    "source_url": "https://crtc.gc.ca/eng/archive/2020/2020-391.htm",
+    "source_document_date": "2020-12-04",
+    "access_kind": "search_index_observation",
+    "retrieved_date": "2026-09-09",
+    "original_document_archived": false,
+    "locator": "Paragraphs 8, 32 and 33",
+    "observation": "The decision authorizes the six Okanagan programme services to use three CHKL multiplex carriers.",
+    "limitations": "Approval is not an implementation date; CHBC services retain their identities.",
+    "retrieved_snippets": [
+      "Ottawa, 4 December 2020",
+      "The Commission approves applications to amend the broadcasting licences",
+      "to broadcast a multiplexed signal"
+    ],
+    "snippet_access": "web search tool returned indexed primary-source text; direct document bytes unavailable",
+    "snippet_rechecked_date": "2026-09-09"
+  }
+]

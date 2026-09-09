@@ -3,3 +3,6 @@
 *.docx -text
 *.pdf -text
 *.xlsx -text
+
+# Preserve hashed source evidence byte for byte.
+/history/sources/** -text
